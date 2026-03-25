@@ -1,22 +1,40 @@
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
-public class TrainConsistManagement{
+public class TrainConsistManagement {
 
     public static void main(String[] args) {
 
-        // Welcome Message
         System.out.println("=== Train Consist Management App ===");
 
-        // Initialize empty train consist (list of bogies)
-        List<String> trainConsist = new ArrayList<>();
+        // 🔹 Create LinkedList for train consist
+        LinkedList<String> train = new LinkedList<>();
 
-        // Display initial bogie count
-        System.out.println("Train consist initialized.");
-        System.out.println("Initial number of bogies: " + trainConsist.size());
+        // 🔹 Add bogies
+        train.add("Engine");
+        train.add("Sleeper");
+        train.add("AC");
+        train.add("Cargo");
+        train.add("Guard");
 
-        // Program continues...
+        // 🔹 Display initial train
+        System.out.println("\nInitial Train Consist:");
+        System.out.println(train);
+
+        // 🔹 Insert Pantry Car at position 2
+        train.add(2, "Pantry Car");
+
+        System.out.println("\nAfter adding Pantry Car at position 2:");
+        System.out.println(train);
+
+        // 🔹 Remove first and last bogie
+        train.removeFirst();
+        train.removeLast();
+
+        // 🔹 Final consist
+        System.out.println("\nFinal Train Consist:");
+        System.out.println(train);
     }
 }
+
 
